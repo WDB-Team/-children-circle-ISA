@@ -4,7 +4,7 @@
       appear
       enter-active-class="animated bounceIn"
       leave-active-class="animated bounceOut"
-      :duration="{ leave: 300 }"
+      :duration="{ enter: 2000, leave: 300 }"
     >
       <div
         v-show="AnimatorGroup1"
@@ -43,7 +43,7 @@
       appear
       enter-active-class="animated slideInUp"
       leave-active-class="animated slideOutDown"
-      :duration="{ leave: 300 }"
+      :duration="{ enter: 500, leave: 300 }"
     >
       <p v-show="AnimatorGroup2" key="q" class="AnimationGroup2">
         <q
@@ -100,7 +100,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .Decorator {
   inline-size: 100%;
   block-size: 100px;

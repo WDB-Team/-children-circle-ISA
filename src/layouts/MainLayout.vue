@@ -7,10 +7,10 @@
     >
       <q-header v-show="UIStore.Header" class="Header AnimatorHeader" elevated>
         <q-toolbar>
-          <q-toolbar-tittle class="Tittle">
+          <q-toolbar-title class="Title">
             <q-icon class="q-mr-xs" size="80px" name="img:Logo.svg"></q-icon>
             <span class="q-mr-md">Alegría</span> Círculo Infantil
-          </q-toolbar-tittle></q-toolbar
+          </q-toolbar-title></q-toolbar
         >
       </q-header>
     </transition>
@@ -24,7 +24,6 @@
 import { useUIStore } from "src/stores/ui-store";
 
 const UIStore = useUIStore();
-console.log(UIStore.Header);
 </script>
 
 <style scoped>
@@ -33,14 +32,14 @@ console.log(UIStore.Header);
   color: #000072;
 }
 
-.Header .Tittle {
+.Header .Title {
   font-size: 16px;
   font-weight: 700;
   text-align: center;
   inline-size: 100%;
 }
 
-.Header .Tittle span {
+.Header .Title span {
   color: #4066ff;
   font-size: 20px;
 }

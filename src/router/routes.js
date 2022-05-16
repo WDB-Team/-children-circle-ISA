@@ -14,6 +14,10 @@ const routes = [
         path: "createAccount",
         component: () => import("pages/CreateAccountPage.vue"),
       },
+      {
+        path: "onBoarding",
+        component: () => import("pages/OnBoardPage.vue"),
+      },
     ],
   },
 
