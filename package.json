@@ -1,8 +1,8 @@
 {
-  "name": "quasar-project",
+  "name": "Círculo Infantil Alegría",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "description": "Un proyecto de un Círculo infantil digital es un modelo de ficticio para la evaluacion final de la asignatura de Ingeniería de Software Avanzado",
+  "productName": "Círculo Infantil Alegría",
   "author": "Yaalalf <yaalalf98@gmail.com>",
   "private": true,
   "scripts": {

@@ -1,116 +1,51 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
-
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
-
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
+    <transition
+      appear
+      enter-active-class="animated slideInDown"
+      leave-active-class="animated slideOutUp"
     >
-      <q-list>
-        <q-item-label
-          header
+      <q-header v-show="UIStore.Header" class="Header AnimatorHeader" elevated>
+        <q-toolbar>
+          <q-toolbar-tittle class="Tittle">
+            <q-icon class="q-mr-xs" size="80px" name="img:Logo.svg"></q-icon>
+            <span class="q-mr-md">Alegría</span> Círculo Infantil
+          </q-toolbar-tittle></q-toolbar
         >
-          Essential Links
-        </q-item-label>
-
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer>
-
+      </q-header>
+    </transition>
     <q-page-container>
       <router-view />
     </q-page-container>
   </q-layout>
 </template>
 
-<script>
-import { defineComponent, ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
+<script setup>
+import { useUIStore } from "src/stores/ui-store";
 
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-]
-
-export default defineComponent({
-  name: 'MainLayout',
-
-  components: {
-    EssentialLink
-  },
-
-  setup () {
-    const leftDrawerOpen = ref(false)
-
-    return {
-      essentialLinks: linksList,
-      leftDrawerOpen,
-      toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
-    }
-  }
-})
+const UIStore = useUIStore();
+console.log(UIStore.Header);
 </script>
+
+<style scoped>
+.Header {
+  background-color: rgb(255, 255, 179);
+  color: #000072;
+}
+
+.Header .Tittle {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  inline-size: 100%;
+}
+
+.Header .Tittle span {
+  color: #4066ff;
+  font-size: 20px;
+}
+
+.AnimatorHeader {
+  animation-duration: 1s;
+}
+</style>

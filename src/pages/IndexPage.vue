@@ -1,17 +1,13 @@
 <template>
   <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    >
+    <InnitSection />
+    <!-- <LoggIn /> -->
+    <!-- <OnBoarding></OnBoarding> -->
   </q-page>
 </template>
 
-<script>
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'IndexPage'
-})
+<script setup>
+import OnBoarding from "src/components/OnBoarding.vue";
+import LoggIn from "../components/LoggIn.vue";
+import InnitSection from "../components/InnitSection.vue";
 </script>
