@@ -3,3 +3,7 @@
 body {
   background-color: rgb(238, 238, 133);
 }
+
+#q-app {
+  overflow-x: hidden;
+}
