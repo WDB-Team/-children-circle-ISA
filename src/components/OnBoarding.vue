@@ -68,7 +68,7 @@
           <q-btn
             class="q-my-lg"
             label="Comenzar"
-            @click="toForm"
+            @click="toMain"
             icon-right="escalator_warning"
             color="indigo-10"
             size="12px"
@@ -91,14 +91,13 @@ export default {
     };
   },
   methods: {
-    toForm() {
+    toMain() {
       this.AnimatorGroup1 = false;
 
-      debounce(this.debounceForm, 400)();
+      debounce(this.debounceMain, 1000)();
     },
-
-    debounceForm() {
-      this.$router.push("/");
+    debounceMain() {
+      this.$router.push("/app");
     },
   },
   setup() {
@@ -109,7 +108,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .Carousel {
   inline-size: 100vw;
   background-color: rgba(0, 0, 0, 0);

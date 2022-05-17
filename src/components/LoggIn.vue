@@ -50,7 +50,12 @@
           </template>
         </q-input>
         <div class="Buttons">
-          <q-btn class="Crear" label="Crear" color="indigo-10" />
+          <q-btn
+            class="Crear"
+            label="Crear"
+            @click="toMain"
+            color="indigo-10"
+          />
           <q-btn
             label="Regresar"
             @click="toInnit"
@@ -82,16 +87,16 @@ export default {
 
       debounce(this.debounceInnit, 400)();
     },
-    toOnBoarding() {
+    toMain() {
       this.AnimatorGroup1 = false;
 
-      debounce(this.debounceOnBoarding, 1000)();
+      debounce(this.debounceMain, 1000)();
     },
     debounceInnit() {
       this.$router.push("/");
     },
-    debounceOnBoarding() {
-      this.$router.push("/");
+    debounceMain() {
+      this.$router.push("/app");
     },
   },
 
@@ -152,7 +157,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .FormContainer {
   inline-size: 80%;
   block-size: 500px;

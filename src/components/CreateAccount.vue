@@ -157,7 +157,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .FormContainer {
   inline-size: 80%;
   block-size: 500px;
