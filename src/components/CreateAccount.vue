@@ -28,6 +28,18 @@
         />
 
         <q-input
+          class="UserName"
+          color="indigo-10"
+          v-model="email"
+          label="Escribe tu Email"
+          lazy-rules="ondemand"
+          :rules="[
+            (val) => (val && val.length > 0) || 'Por favor llena este campo',
+          ]"
+          type="email"
+        />
+
+        <q-input
           class="Password"
           color="indigo-10"
           :type="inputPasswordType"
@@ -50,12 +62,7 @@
           </template>
         </q-input>
         <div class="Buttons">
-          <q-btn
-            class="Crear"
-            label="Crear"
-            @click="toOnBoarding"
-            color="indigo-10"
-          />
+          <q-btn type="submit" class="Crear" label="Crear" color="indigo-10" />
           <q-btn
             label="Regresar"
             @click="toInnit"
@@ -104,35 +111,29 @@ export default {
     const $q = useQuasar();
 
     const name = ref(null);
+    const email = ref(null);
     const password = ref(null);
-    const accept = ref(false);
+
     const isPasswordVisible = ref(false);
     const inputPasswordType = ref("password");
     const inputPasswordIcon = ref("o_visibility_off");
     return {
       name,
+      email,
       password,
-      accept,
+
       isPasswordVisible,
       inputPasswordType,
       inputPasswordIcon,
 
       onSubmit() {
-        if (accept.value !== true) {
-          $q.notify({
-            color: "red-5",
-            textColor: "white",
-            icon: "warning",
-            message: "You need to accept the license and terms first",
-          });
-        } else {
-          $q.notify({
-            color: "green-4",
-            textColor: "white",
-            icon: "cloud_done",
-            message: "Submitted",
-          });
-        }
+        $q.notify({
+          color: "blue-6",
+          textColor: "white",
+          message: "Procesando",
+          spinner: true,
+          position: "top",
+        });
       },
 
       onReset() {

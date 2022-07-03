@@ -45,16 +45,34 @@
       :breakpoint="700"
       elevated
     >
-      <q-scroll-area class="fit">
-        <div class="q-pa-sm">
+      <q-scroll-area class="fit DrawerContainer">
+        <div class="q-pa-lg">
           <q-btn
             flat
             @click="drawerLeft = !drawerLeft"
             round
             dense
-            icon="menu"
+            icon="close"
           />
         </div>
+        <q-list>
+          <q-expansion-item icon="child_care" label="Mis Pequeños">
+            <q-list>
+              <q-item :inset-level="1" clickable v-ripple>
+                <q-item-section class="Avatar" avatar>
+                  <q-icon name="o_add_circle" />
+                </q-item-section>
+
+                <q-item-section>Matricular </q-item-section>
+              </q-item>
+            </q-list>
+          </q-expansion-item>
+
+          <q-expansion-item icon="calendar_month" label="Horarios">
+          </q-expansion-item>
+
+          <q-expansion-item icon="drafts" label="Drafts"> </q-expansion-item>
+        </q-list>
       </q-scroll-area>
     </q-drawer>
 
@@ -126,6 +144,16 @@ export default {
   color: #000072;
   font-size: 16px;
   font-weight: 500;
+}
+
+.DrawerContainer {
+  background-color: rgb(255, 255, 179);
+  color: #000072;
+}
+
+.DrawerContainer .Avatar {
+  inline-size: 40px;
+  min-inline-size: 0px;
 }
 
 .AnimatorHeader {
