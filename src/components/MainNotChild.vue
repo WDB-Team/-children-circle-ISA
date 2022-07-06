@@ -20,6 +20,7 @@
         icon="person_add"
         outline
         label="Iniciar Matricula"
+        @click="toAddChild"
       ></q-btn>
     </div>
   </transition>
@@ -27,7 +28,7 @@
 
 <script>
 import { useUIStore } from "src/stores/ui-store";
-
+import { debounce } from "quasar";
 export default {
   data() {
     return { UIStore: useUIStore() };
@@ -37,6 +38,18 @@ export default {
     if (!this.UIStore.MainNotChild) {
       this.UIStore.ToggleMainNotChild();
     }
+  },
+  methods: {
+    toAddChild() {
+      this.UIStore.ToggleMainNotChild();
+      this.UIStore.ToggleHeader();
+
+      debounce(this.debounceAddChild, 400)();
+    },
+
+    debounceAddChild() {
+      this.$router.push("/addChild");
+    },
   },
 };
 </script>

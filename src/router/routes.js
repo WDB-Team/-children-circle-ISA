@@ -27,6 +27,17 @@ const routes = [
     ],
   },
 
+  {
+    path: "/addChild",
+    component: () => import("layouts/LoginLayout.vue"),
+    children: [
+      {
+        path: "",
+        component: () => import("src/pages/AddChildPage.vue"),
+      },
+    ],
+  },
+
   // Always leave this as last one,
   // but you can also remove it
   {

@@ -1,0 +1,151 @@
+----------------------------------------------------------------------------------------------------
+users
+/* 1 */
+{
+    "_id" : ObjectId("6291bb312388feac235d845d"),
+    "full_name" : "Cesar Alejandro Chaviano",
+    "email" : "cachj@gmail.com",
+    "password" : "$2b$10$gZjiCCA8fh.gCPqrJ31hhuU8rzI09xAeBE252Jwc7g50Y8zsLXUHm",
+    "residencia" : "vivo en mi casa",
+    "little_description" : "estudiante",
+    "created at:" : ISODate("2022-05-28T06:03:29.804Z"),
+    "updated at:" : ISODate("2022-05-28T06:03:29.804Z"),
+    "__v" : 0
+}
+/* 2 */
+{
+    "_id" : ObjectId("6291bc9c2388feac235d845f"),
+    "full_name" : "Luis felipe Millan Prado",
+    "email" : "lfmp@gmail.com",
+    "password" : "$2b$10$ftkPMrzM3gPob2RA80MQTehDqQ0KHc6MOqCBU.HW.I7hi3rItPW7G",
+    "residencia" : "vivo en mi casa",
+    "little_description" : "estudiante",
+    "created at:" : ISODate("2022-05-28T06:09:32.185Z"),
+    "updated at:" : ISODate("2022-05-28T06:09:32.185Z"),
+    "__v" : 0
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("6291bcec2388feac235d8461"),
+    "full_name" : "Johans Alfonso Linares",
+    "email" : "johanalfonzolinares@gmail.com",
+    "password" : "$2b$10$mkef8W.kR49VQHR70F5zp.LIN6LMGuNYZAK6dLpwe1/Hhvb7g.bGW",
+    "residencia" : "vivo en mi casa",
+    "little_description" : "estudiante",
+    "created at:" : ISODate("2022-05-28T06:10:52.057Z"),
+    "updated at:" : ISODate("2022-05-28T06:10:52.057Z"),
+    "__v" : 0
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("6292fbaa7da8272864e6721e"),
+    "full_name" : "Brian Sanchez Noseque",
+    "email" : "briansanchez@gmail.com",
+    "password" : "$2b$10$7q2Pw3UbMZF0YBkwqXp23u1Qkey6W4/u36NXRuTE1rYvoeGooGLgy",
+    "residencia" : "vivo en mi casa",
+    "little_description" : "estudiante",
+    "created at:" : ISODate("2022-05-29T04:50:50.194Z"),
+    "updated at:" : ISODate("2022-05-29T04:50:50.194Z"),
+    "__v" : 0
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+boys
+/* 1 */
+{
+    "_id" : ObjectId("6291be342388feac235d8465"),
+    "user_id" : ObjectId("6291bb312388feac235d845d"),
+    "full_name" : "Cesar Hijo1",
+    "edad" : 4,
+    "sexo" : "M",
+    "alimentos_dañinos" : [ 
+        "lactosa", 
+        "avena"
+    ],
+    "little_description" : "es un crio malisimo",
+    "createdat:" : ISODate("2022-05-28T06:16:20.929Z"),
+    "updatedat:" : ISODate("2022-05-28T06:16:20.929Z"),
+    "__v" : 0
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("6291be892388feac235d8467"),
+    "user_id" : ObjectId("6291bb312388feac235d845d"),
+    "full_name" : "Cesar Hijo2",
+    "edad" : 3,
+    "sexo" : "M",
+    "alimentos_dañinos" : [ 
+        "lactosa"
+    ],
+    "little_description" : "es un crio malisimo",
+    "createdat:" : ISODate("2022-05-28T06:17:45.611Z"),
+    "updatedat:" : ISODate("2022-05-28T06:17:45.611Z"),
+    "__v" : 0
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("6291c0812388feac235d8469"),
+    "user_id" : ObjectId("6291bc9c2388feac235d845f"),
+    "full_name" : "Felipe Hijo1",
+    "edad" : 5,
+    "sexo" : "M",
+    "alimentos_dañinos" : [ 
+        "arina trigo"
+    ],
+    "little_description" : "es un crio malisimo",
+    "createdat:" : ISODate("2022-05-28T06:26:09.292Z"),
+    "updatedat:" : ISODate("2022-05-28T06:26:09.292Z"),
+    "__v" : 0
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("6291c0a52388feac235d846b"),
+    "user_id" : ObjectId("6291bc9c2388feac235d845f"),
+    "full_name" : "Felipe Hijo2",
+    "edad" : 3,
+    "sexo" : "M",
+    "alimentos_dañinos" : [ 
+        "lactosa"
+    ],
+    "little_description" : "es un crio malisimo",
+    "createdat:" : ISODate("2022-05-28T06:26:45.745Z"),
+    "updatedat:" : ISODate("2022-05-28T06:26:45.745Z"),
+    "__v" : 0
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("6292fdf07da8272864e67220"),
+    "user_id" : ObjectId("6291bc9c2388feac235d845f"),
+    "full_name" : "Felipe Hijo3",
+    "edad" : 3,
+    "sexo" : "M",
+    "alimentos_dañinos" : [ 
+        "lactosa"
+    ],
+    "little_description" : "es un crio malisimo",
+    "createdat:" : ISODate("2022-05-29T05:00:32.192Z"),
+    "updatedat:" : ISODate("2022-05-29T05:00:32.192Z"),
+    "__v" : 0
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("6292ff1a7da8272864e67222"),
+    "user_id" : ObjectId("6291bcec2388feac235d8461"),
+    "full_name" : "Johans Hijo1",
+    "edad" : 2,
+    "sexo" : "M",
+    "alimentos_dañinos" : [ 
+        "lactosa"
+    ],
+    "little_description" : "es un crio malisimo",
+    "createdat:" : ISODate("2022-05-29T05:05:30.803Z"),
+    "updatedat:" : ISODate("2022-05-29T05:05:30.803Z"),
+    "__v" : 0
+}
