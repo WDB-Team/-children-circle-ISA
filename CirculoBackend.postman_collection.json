@@ -1,0 +1,2016 @@
+{
+	"info": {
+		"_postman_id": "0de22e01-6f54-4ae2-8e6f-0814c4f0a59b",
+		"name": "CirculoBackend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "All Boys Of User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4ODVmMTU5YWMwODMxZjkzNzg2M2Q4IiwiZW1haWwiOiJsZm1wQGdtYWlsLmNvbSIsImZ1bGxfbmFtZSI6Ikx1aXMgZmVsaXBlIE1pbGxhbiBQcmFkbyIsImlhdCI6MTY1MzEwNzc1OCwiZXhwIjoxNjU1Njk5NzU4fQ.CHlnK20HO0qv0lsiEecefYvJAlzUj9oZtlHMYP0yi8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"6291bb312388feac235d845d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/user/getAllBoyOfUser",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"getAllBoyOfUser"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All Boys Of User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"6289d79105fd1ccda4166fff\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/user/getAllBoyOfUser",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										"getAllBoyOfUser"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Custom-Headers",
+									"value": "Tipo-Personalizado...!"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "840"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"348-XG3uUZGWnklhBa6+QG+U5eBSQu0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 May 2022 05:21:22 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"\",\n    \"Body\": [\n        {\n            \"_id\": \"6289dacc05fd1ccda4167009\",\n            \"user_id\": \"6289d79105fd1ccda4166fff\",\n            \"full_name\": \"Pedro Johans\",\n            \"edad\": 3,\n            \"sexo\": \"M\",\n            \"residencia\": \"vivo en mi casa.\",\n            \"little_description\": \"es un crio malisimo\",\n            \"createdat:\": \"2022-05-22T06:40:12.983Z\",\n            \"updatedat:\": \"2022-05-22T06:40:12.983Z\"\n        },\n        {\n            \"_id\": \"6289daf605fd1ccda416700b\",\n            \"user_id\": \"6289d79105fd1ccda4166fff\",\n            \"full_name\": \"Juan Felipe\",\n            \"edad\": 4,\n            \"sexo\": \"M\",\n            \"residencia\": \"vivo en mi casa.\",\n            \"little_description\": \"es un crio malisimo\",\n            \"createdat:\": \"2022-05-22T06:40:54.324Z\",\n            \"updatedat:\": \"2022-05-22T06:40:54.324Z\"\n        },\n        {\n            \"_id\": \"6289db2c05fd1ccda416700d\",\n            \"user_id\": \"6289d79105fd1ccda4166fff\",\n            \"full_name\": \"cesariones\",\n            \"edad\": 4,\n            \"sexo\": \"M\",\n            \"residencia\": \"vivo en mi casa.\",\n            \"little_description\": \"es un crio malisimo\",\n            \"createdat:\": \"2022-05-22T06:41:48.522Z\",\n            \"updatedat:\": \"2022-05-22T06:41:48.522Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "All Boys Of User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"6289d79105fd1ccda4166fff\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/user/getAllBoyOfUser",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										"getAllBoyOfUser"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Custom-Headers",
+									"value": "Tipo-Personalizado...!"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"34-ygic8I3WeFImZkOUlKi5K0Xhwm0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 May 2022 04:41:29 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"El usuario no posee niños...!\",\n    \"Body\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4ODVmMTU5YWMwODMxZjkzNzg2M2Q4IiwiZW1haWwiOiJsZm1wQGdtYWlsLmNvbSIsImZ1bGxfbmFtZSI6Ikx1aXMgZmVsaXBlIE1pbGxhbiBQcmFkbyIsImlhdCI6MTY1MzEwNzc1OCwiZXhwIjoxNjU1Njk5NzU4fQ.CHlnK20HO0qv0lsiEecefYvJAlzUj9oZtlHMYP0yi8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"6291bb312388feac235d845d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/user/searchUserById",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"searchUserById"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"62885f159ac0831f937863d8\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/user/searchUserById",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										"searchUserById"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Custom-Headers",
+									"value": "Tipo-Personalizado...!"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"2c-qeGtDq6ggzJlWztA1JJfFXE4EIA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 May 2022 15:26:46 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"User no encontrado...!\",\n    \"Body\": \"\"\n}"
+						},
+						{
+							"name": "User By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"6291bb312388feac235d845\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/user/searchUserById",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										"searchUserById"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Custom-Headers",
+									"value": "Tipo-Personalizado...!"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "140"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"8c-+Hre7hytQvffQmDTwTBXLvIOQuA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 May 2022 04:40:38 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"BSONTypeError: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters (error interno)\",\n    \"Body\": \"\"\n}"
+						},
+						{
+							"name": "User By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"6291bb312388feac235d845d\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/user/searchUserById",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										"searchUserById"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Custom-Headers",
+									"value": "Tipo-Personalizado...!"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "340"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"154-yYZpXPRkIQ65FeLy2x3JGuHno2M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 May 2022 04:46:48 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"\",\n    \"Body\": {\n        \"_id\": \"6291bb312388feac235d845d\",\n        \"full_name\": \"Cesar Alejandro Chaviano\",\n        \"email\": \"cachj@gmail.com\",\n        \"password\": \"$2b$10$gZjiCCA8fh.gCPqrJ31hhuU8rzI09xAeBE252Jwc7g50Y8zsLXUHm\",\n        \"residencia\": \"vivo en mi casa\",\n        \"little_description\": \"estudiante\",\n        \"created at:\": \"2022-05-28T06:03:29.804Z\",\n        \"updated at:\": \"2022-05-28T06:03:29.804Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "User By Email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4ODVmMTU5YWMwODMxZjkzNzg2M2Q4IiwiZW1haWwiOiJsZm1wQGdtYWlsLmNvbSIsImZ1bGxfbmFtZSI6Ikx1aXMgZmVsaXBlIE1pbGxhbiBQcmFkbyIsImlhdCI6MTY1MzEwNzc1OCwiZXhwIjoxNjU1Njk5NzU4fQ.CHlnK20HO0qv0lsiEecefYvJAlzUj9oZtlHMYP0yi8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4NDNkOGZlNTJmNjY0MGQ2OTc5NGM1IiwiZW1haWwiOiJtYXJnZXNpbXBzb25AZ21haWwuY29tIiwiZnVsbF9uYW1lIjoiTWFyZ2UgU2ltcHNvbiBWb3VkaWUiLCJhcGlrZXl0b2tlbiI6ImViZGU3MjA2MTgwNzhmOTlhZThhZTQ3MzYwNjk2MWFmNjY5YzU5NzhmY2U0ZThhNzFjOWQ2MDEzNjFiY2UyNzIiLCJpYXQiOjE2NTI4ODQyOTUsImV4cCI6MTY1Mjg4NDM4MX0.IMn96Cj1YMuA7kR4lyKphT5JdpEH-48b_uQ7Z--WMUU",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"lfmp@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/user/searchUserByEmail",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"searchUserByEmail"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User By Email",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4NDNkOGZlNTJmNjY0MGQ2OTc5NGM1IiwiZW1haWwiOiJtYXJnZXNpbXBzb25AZ21haWwuY29tIiwiZnVsbF9uYW1lIjoiTWFyZ2UgU2ltcHNvbiBWb3VkaWUiLCJhcGlrZXl0b2tlbiI6ImViZGU3MjA2MTgwNzhmOTlhZThhZTQ3MzYwNjk2MWFmNjY5YzU5NzhmY2U0ZThhNzFjOWQ2MDEzNjFiY2UyNzIiLCJpYXQiOjE2NTI4ODQyOTUsImV4cCI6MTY1Mjg4NDM4MX0.IMn96Cj1YMuA7kR4lyKphT5JdpEH-48b_uQ7Z--WMUU",
+										"type": "default",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"lfmp@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/user/searchUserByEmail",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										"searchUserByEmail"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Custom-Headers",
+									"value": "Tipo-Personalizado...!"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "339"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"153-JnoSG2BQu8610rytWYtFGN+4UpA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 May 2022 04:45:25 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"\",\n    \"Body\": {\n        \"_id\": \"6291bc9c2388feac235d845f\",\n        \"full_name\": \"Luis felipe Millan Prado\",\n        \"email\": \"lfmp@gmail.com\",\n        \"password\": \"$2b$10$ftkPMrzM3gPob2RA80MQTehDqQ0KHc6MOqCBU.HW.I7hi3rItPW7G\",\n        \"residencia\": \"vivo en mi casa\",\n        \"little_description\": \"estudiante\",\n        \"created at:\": \"2022-05-28T06:09:32.185Z\",\n        \"updated at:\": \"2022-05-28T06:09:32.185Z\"\n    }\n}"
+						},
+						{
+							"name": "User By Email",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4NDNkOGZlNTJmNjY0MGQ2OTc5NGM1IiwiZW1haWwiOiJtYXJnZXNpbXBzb25AZ21haWwuY29tIiwiZnVsbF9uYW1lIjoiTWFyZ2UgU2ltcHNvbiBWb3VkaWUiLCJhcGlrZXl0b2tlbiI6ImViZGU3MjA2MTgwNzhmOTlhZThhZTQ3MzYwNjk2MWFmNjY5YzU5NzhmY2U0ZThhNzFjOWQ2MDEzNjFiY2UyNzIiLCJpYXQiOjE2NTI4ODQyOTUsImV4cCI6MTY1Mjg4NDM4MX0.IMn96Cj1YMuA7kR4lyKphT5JdpEH-48b_uQ7Z--WMUU",
+										"type": "default",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"lfmp@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/user/searchUserByEmail",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										"searchUserByEmail"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 May 2022 04:45:52 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "12"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "Unauthorized"
+						}
+					]
+				},
+				{
+					"name": "Autenticate User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "lfmp@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "lossimpson10",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/authorization/sign-in",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"authorization",
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"Brian Sanchez Noseque\",\r\n    \"email\": \"briansanchez@gmail.com\",\r\n    \"password\": \"lossimpson10\",\r\n\t\"residencia\":\"vivo en mi casa\",\r\n    \"little_description\": \"estudiante\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/authorization/sign-up",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"authorization",
+								"sign-up"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"full_name\": \"Brian Sanchez Noseque\",\r\n    \"email\": \"briansanchez@gmail.com\",\r\n    \"password\": \"lossimpson10\",\r\n\t\"residencia\":\"vivo en mi casa\",\r\n    \"little_description\": \"estudiante\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/authorization/sign-up",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"authorization",
+										"sign-up"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Custom-Headers",
+									"value": "Tipo-Personalizado...!"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "320"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"140-G1RBX3Zfg7OANG7J8R3EocxoPnk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 May 2022 06:12:22 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"\",\n    \"Body\": [\n        \"6291bd462388feac235d8463\",\n        \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI5MWJkNDYyMzg4ZmVhYzIzNWQ4NDYzIiwiZW1haWwiOiJicmlhbnNhbmNoZXpAZ21haWwuY29tIiwiZnVsbF9uYW1lIjoiQnJpYW4gU2FuY2hleiBOb3NlcXVlIiwiaWF0IjoxNjUzNzE4MzQyLCJleHAiOjE2NjE0OTQzNDJ9.BVn4ztEtJ5omKO7WAsPTd6VoLznakQNc0ZsOIO7zhTU\"\n    ]\n}"
+						},
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"full_name\": \"Brian Sanchez Noseque\",\r\n    \"email\": \"briansanchez@gmail.com\",\r\n    \"password\": \"lossimpson10\",\r\n\t\"residencia\":\"vivo en mi casa\",\r\n    \"little_description\": \"estudiante\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/authorization/sign-up",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"authorization",
+										"sign-up"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Custom-Headers",
+									"value": "Tipo-Personalizado...!"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "320"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"140-VVk1LNzWdPrYK7srHJRzsua0SP0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 May 2022 04:50:50 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"\",\n    \"Body\": [\n        \"6292fbaa7da8272864e6721e\",\n        \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI5MmZiYWE3ZGE4MjcyODY0ZTY3MjFlIiwiZW1haWwiOiJicmlhbnNhbmNoZXpAZ21haWwuY29tIiwiZnVsbF9uYW1lIjoiQnJpYW4gU2FuY2hleiBOb3NlcXVlIiwiaWF0IjoxNjUzNzk5ODUwLCJleHAiOjE2NjE1NzU4NTB9.74dwnO1tSBYi8oXuf22wseyeqSaM3s3ReM_Bn0EVm4E\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4ODVmMTU5YWMwODMxZjkzNzg2M2Q4IiwiZW1haWwiOiJsZm1wQGdtYWlsLmNvbSIsImZ1bGxfbmFtZSI6Ikx1aXMgZmVsaXBlIE1pbGxhbiBQcmFkbyIsImlhdCI6MTY1MzEwNzc1OCwiZXhwIjoxNjU1Njk5NzU4fQ.CHlnK20HO0qv0lsiEecefYvJAlzUj9oZtlHMYP0yi8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"6291bd462388feac235d8463\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/user/deleteUserSystem",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"deleteUserSystem"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\":\"6287330ddbb90a7ee24bffbe\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/user/deleteUserSystem",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										"deleteUserSystem"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Custom-Headers",
+									"value": "Tipo-Personalizado...!"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"32-1YluENG/9/FBMCGg1EDArcIWMJw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 May 2022 04:47:25 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"Unauthorized (error interno)\",\n    \"Body\": \"\"\n}"
+						},
+						{
+							"name": "Delete User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\":\"6287330ddbb90a7ee24bffbe\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/user/deleteUserSystem",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										"deleteUserSystem"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Custom-Headers",
+									"value": "Tipo-Personalizado...!"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"2e-OsJc6ombTRvcc8SEJP+PBnxOYwc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 May 2022 04:49:07 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"Usuario no existente...!\",\n    \"Body\": \"\"\n}"
+						},
+						{
+							"name": "Delete User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"6291bd462388feac235d8463\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/user/deleteUserSystem",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										"deleteUserSystem"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Custom-Headers",
+									"value": "Tipo-Personalizado...!"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"2b-Vo76KDXXL+rddB+n/OGaA2LfJGE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 May 2022 04:50:24 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"\",\n    \"Body\": \"Usuario eliminado...!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Name User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4ODVmMTU5YWMwODMxZjkzNzg2M2Q4IiwiZW1haWwiOiJsZm1wQGdtYWlsLmNvbSIsImZ1bGxfbmFtZSI6Ikx1aXMgZmVsaXBlIE1pbGxhbiBQcmFkbyIsImlhdCI6MTY1MzEwNzc1OCwiZXhwIjoxNjU1Njk5NzU4fQ.CHlnK20HO0qv0lsiEecefYvJAlzUj9oZtlHMYP0yi8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\":\"62885f659ac0831f937863da\",\r\n    \"new_fullname\":\"Johans Alfonso Linares\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/user/updateFullNameOfUser",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"updateFullNameOfUser"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Name User",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\":\"62885f659ac0831f937863da\",\r\n    \"new_fullname\":\"Johans Alfonso Linares\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/user/updateFullNameOfUser",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										"updateFullNameOfUser"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Custom-Headers",
+									"value": "Tipo-Personalizado...!"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "80"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"50-02EnqwpYZ9qHscStbEWdGkHA/OU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 May 2022 04:51:23 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"No se pudo encontrar el usuario especificado por el id...!\",\n    \"Body\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update  User Email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4ODVmMTU5YWMwODMxZjkzNzg2M2Q4IiwiZW1haWwiOiJsZm1wQGdtYWlsLmNvbSIsImZ1bGxfbmFtZSI6Ikx1aXMgZmVsaXBlIE1pbGxhbiBQcmFkbyIsImlhdCI6MTY1MzEwNzc1OCwiZXhwIjoxNjU1Njk5NzU4fQ.CHlnK20HO0qv0lsiEecefYvJAlzUj9oZtlHMYP0yi8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"62885f659ac0831f937863da\",\r\n    \"new_email\": \"johanalfonzolinares@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/user/updateEmailOfUser",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"updateEmailOfUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4ODVmMTU5YWMwODMxZjkzNzg2M2Q4IiwiZW1haWwiOiJsZm1wQGdtYWlsLmNvbSIsImZ1bGxfbmFtZSI6Ikx1aXMgZmVsaXBlIE1pbGxhbiBQcmFkbyIsImlhdCI6MTY1MzEwNzc1OCwiZXhwIjoxNjU1Njk5NzU4fQ.CHlnK20HO0qv0lsiEecefYvJAlzUj9oZtlHMYP0yi8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\":\"62885f659ac0831f937863da\",\r\n    \"new_password\":\"lossimpson9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/user/updatePasswordOfUser",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"updatePasswordOfUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Little Desciption",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4ODVmMTU5YWMwODMxZjkzNzg2M2Q4IiwiZW1haWwiOiJsZm1wQGdtYWlsLmNvbSIsImZ1bGxfbmFtZSI6Ikx1aXMgZmVsaXBlIE1pbGxhbiBQcmFkbyIsImlhdCI6MTY1MzEwNzc1OCwiZXhwIjoxNjU1Njk5NzU4fQ.CHlnK20HO0qv0lsiEecefYvJAlzUj9oZtlHMYP0yi8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"6288662b85c64bbd5cd6675c\",\r\n    \"new_little_description\": \"estudiante UCF\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/user/updateLittleDescriptionOfUser",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"updateLittleDescriptionOfUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Boys",
+			"item": [
+				{
+					"name": "Create Boy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4ODVmMTU5YWMwODMxZjkzNzg2M2Q4IiwiZW1haWwiOiJsZm1wQGdtYWlsLmNvbSIsImZ1bGxfbmFtZSI6Ikx1aXMgZmVsaXBlIE1pbGxhbiBQcmFkbyIsImlhdCI6MTY1MzEwNzc1OCwiZXhwIjoxNjU1Njk5NzU4fQ.CHlnK20HO0qv0lsiEecefYvJAlzUj9oZtlHMYP0yi8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"6291bcec2388feac235d8461\",\r\n    \"full_name\": \"Johans Hijo1\",\r\n    \"edad\": 2,\r\n    \"sexo\": \"M\",\r\n    \"alimentos_dañinos\": [\r\n        \"lactosa\"\r\n    ],\r\n    \"little_description\": \"es un crio malisimo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/boy/addBoy",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"boy",
+								"addBoy"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Boy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": \"6291bc9c2388feac235d845f\",\r\n    \"full_name\": \"Felipe Hijo2\",\r\n    \"edad\": 3,\r\n    \"sexo\": \"M\",\r\n    \"alimentos_dañinos\": [\r\n        \"lactosa\"\r\n    ],\r\n    \"little_description\": \"es un crio malisimo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/boy/addBoy",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"boy",
+										"addBoy"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Custom-Headers",
+									"value": "Tipo-Personalizado...!"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"2e-wpP4q135Ivc2aJMY/fwnzKWM/YI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 May 2022 06:26:45 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"\",\n    \"Body\": \"6291c0a52388feac235d846b\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Boy By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4OTQ4YWQ2ZDRiZmVkN2MzYzcxNWU4IiwiZW1haWwiOiJjYWNoakBnbWFpbC5jb20iLCJmdWxsX25hbWUiOiJQRXBlIiwiaWF0IjoxNjUzMTY0MjA1LCJleHAiOjE2NjA5NDAyMDV9.LfoKYdl_j6umROwRcOgk9STP4Gq8Gc7NegS268DOdDM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"boy_id\": \"6292ff1a7da8272864e67222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/boy/searchBoyById",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"boy",
+								"searchBoyById"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Boy By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"boy_id\": \"62887c237d79601b222e6fbe\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/boy/searchBoyById",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"boy",
+										"searchBoyById"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Custom-Headers",
+									"value": "Tipo-Personalizado...!"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"2d-klbSY8RSuCP5usGJT9pZU2u8oTw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 May 2022 05:06:06 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"Niño no encontrado...!\",\n    \"Body\": \"\"\n}"
+						},
+						{
+							"name": "Boy By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"boy_id\": \"6292ff1a7da8272864e67222\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://tempora.herokuapp.com/api/boy/searchBoyById",
+									"protocol": "https",
+									"host": [
+										"tempora",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"boy",
+										"searchBoyById"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Custom-Headers",
+									"value": "Tipo-Personalizado...!"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "294"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"126-ic6mhL9dSE80YBABpiStSrbrAQ4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 May 2022 05:06:31 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Error\": \"\",\n    \"Body\": {\n        \"_id\": \"6292ff1a7da8272864e67222\",\n        \"user_id\": \"6291bcec2388feac235d8461\",\n        \"full_name\": \"Johans Hijo1\",\n        \"edad\": 2,\n        \"sexo\": \"M\",\n        \"alimentos_dañinos\": [\n            \"lactosa\"\n        ],\n        \"little_description\": \"es un crio malisimo\",\n        \"createdat:\": \"2022-05-29T05:05:30.803Z\",\n        \"updatedat:\": \"2022-05-29T05:05:30.803Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Boy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4ODVmMTU5YWMwODMxZjkzNzg2M2Q4IiwiZW1haWwiOiJsZm1wQGdtYWlsLmNvbSIsImZ1bGxfbmFtZSI6Ikx1aXMgZmVsaXBlIE1pbGxhbiBQcmFkbyIsImlhdCI6MTY1MzEwNzc1OCwiZXhwIjoxNjU1Njk5NzU4fQ.CHlnK20HO0qv0lsiEecefYvJAlzUj9oZtlHMYP0yi8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"boy_id\": \"62887c537d79601b222e6fc0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/boy/deleteBoyOf",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"boy",
+								"deleteBoyOf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Boy Name",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4ODVmMTU5YWMwODMxZjkzNzg2M2Q4IiwiZW1haWwiOiJsZm1wQGdtYWlsLmNvbSIsImZ1bGxfbmFtZSI6Ikx1aXMgZmVsaXBlIE1pbGxhbiBQcmFkbyIsImlhdCI6MTY1MzEwNzc1OCwiZXhwIjoxNjU1Njk5NzU4fQ.CHlnK20HO0qv0lsiEecefYvJAlzUj9oZtlHMYP0yi8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"boy_id\": \"62887c237d79601b222e6fbe\",\r\n    \"new_fullname\":\"Flipe Hija3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/boy/updateFullNameOfBoy",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"boy",
+								"updateFullNameOfBoy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Boy Little Description",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4ODVmMTU5YWMwODMxZjkzNzg2M2Q4IiwiZW1haWwiOiJsZm1wQGdtYWlsLmNvbSIsImZ1bGxfbmFtZSI6Ikx1aXMgZmVsaXBlIE1pbGxhbiBQcmFkbyIsImlhdCI6MTY1MzEwNzc1OCwiZXhwIjoxNjU1Njk5NzU4fQ.CHlnK20HO0qv0lsiEecefYvJAlzUj9oZtlHMYP0yi8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"boy_id\": \"62887c237d79601b222e6fbe\",\r\n    \"new_little_description\": \"es una cria malisima\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/boy/updateLittleDescriptionOfBoy",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"boy",
+								"updateLittleDescriptionOfBoy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Boy Age",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4ODVmMTU5YWMwODMxZjkzNzg2M2Q4IiwiZW1haWwiOiJsZm1wQGdtYWlsLmNvbSIsImZ1bGxfbmFtZSI6Ikx1aXMgZmVsaXBlIE1pbGxhbiBQcmFkbyIsImlhdCI6MTY1MzEwNzc1OCwiZXhwIjoxNjU1Njk5NzU4fQ.CHlnK20HO0qv0lsiEecefYvJAlzUj9oZtlHMYP0yi8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"boy_id\": \"62887c237d79601b222e6fbe\",\r\n    \"new_age\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/boy/updateAgeOfBoy",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"boy",
+								"updateAgeOfBoy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Boy Sex",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4ODVmMTU5YWMwODMxZjkzNzg2M2Q4IiwiZW1haWwiOiJsZm1wQGdtYWlsLmNvbSIsImZ1bGxfbmFtZSI6Ikx1aXMgZmVsaXBlIE1pbGxhbiBQcmFkbyIsImlhdCI6MTY1MzEwNzc1OCwiZXhwIjoxNjU1Njk5NzU4fQ.CHlnK20HO0qv0lsiEecefYvJAlzUj9oZtlHMYP0yi8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"boy_id\": \"62887c237d79601b222e6fbe\",\r\n    \"new_sex\": \"F\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/boy/updateSexOfBoy",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"boy",
+								"updateSexOfBoy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Harmful Food",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI4ODVmMTU5YWMwODMxZjkzNzg2M2Q4IiwiZW1haWwiOiJsZm1wQGdtYWlsLmNvbSIsImZ1bGxfbmFtZSI6Ikx1aXMgZmVsaXBlIE1pbGxhbiBQcmFkbyIsImlhdCI6MTY1MzEwNzc1OCwiZXhwIjoxNjU1Njk5NzU4fQ.CHlnK20HO0qv0lsiEecefYvJAlzUj9oZtlHMYP0yi8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"boy_id\": \"62887c237d79601b222e6fbe\",\r\n    \"dangerous_food\": [\"maiz\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tempora.herokuapp.com/api/boy/addHarmfulFood",
+							"protocol": "https",
+							"host": [
+								"tempora",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"boy",
+								"addHarmfulFood"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

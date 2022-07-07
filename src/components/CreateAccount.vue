@@ -28,6 +28,18 @@
         />
 
         <q-input
+          class="UserName"
+          color="indigo-10"
+          v-model="email"
+          label="Escribe tu Email"
+          lazy-rules="ondemand"
+          :rules="[
+            (val) => (val && val.length > 0) || 'Por favor llena este campo',
+          ]"
+          type="email"
+        />
+
+        <q-input
           class="Password"
           color="indigo-10"
           :type="inputPasswordType"
@@ -50,12 +62,7 @@
           </template>
         </q-input>
         <div class="Buttons">
-          <q-btn
-            class="Crear"
-            label="Crear"
-            @click="toOnBoarding"
-            color="indigo-10"
-          />
+          <q-btn type="submit" class="Crear" label="Crear" color="indigo-10" />
           <q-btn
             label="Regresar"
             @click="toInnit"
@@ -71,15 +78,15 @@
 
 <script>
 import { useQuasar } from "quasar";
+import { useUserSeccionStore } from "stores/UserSeccionStore";
+import { useRouter } from "vue-router";
 import { debounce } from "quasar";
 
 import { ref } from "vue";
 
 export default {
   data() {
-    return {
-      AnimatorGroup1: true,
-    };
+    return {};
   },
   methods: {
     toInnit() {
@@ -87,50 +94,114 @@ export default {
 
       debounce(this.debounceInnit, 400)();
     },
-    toOnBoarding() {
-      this.AnimatorGroup1 = false;
 
-      debounce(this.debounceOnBoarding, 600)();
-    },
     debounceInnit() {
       this.$router.push("/");
-    },
-    debounceOnBoarding() {
-      this.$router.push("/login/onBoarding");
     },
   },
 
   setup() {
     const $q = useQuasar();
-
+    const userSeccionStore = useUserSeccionStore();
+    const router = useRouter();
     const name = ref(null);
+    const email = ref(null);
     const password = ref(null);
-    const accept = ref(false);
+
+    const AnimatorGroup1 = ref(true);
+
     const isPasswordVisible = ref(false);
     const inputPasswordType = ref("password");
     const inputPasswordIcon = ref("o_visibility_off");
+
+    function toOnBoarding() {
+      AnimatorGroup1.value = false;
+
+      debounce(debounceOnBoarding, 600)();
+    }
+    function debounceOnBoarding() {
+      router.push("/login/onBoarding");
+    }
+
     return {
       name,
+      email,
       password,
-      accept,
+      userSeccionStore,
       isPasswordVisible,
       inputPasswordType,
       inputPasswordIcon,
+      router,
+      AnimatorGroup1,
 
-      onSubmit() {
-        if (accept.value !== true) {
+      toOnBoarding,
+      debounceOnBoarding,
+
+      async onSubmit() {
+        try {
           $q.notify({
-            color: "red-5",
+            color: "blue-6",
             textColor: "white",
-            icon: "warning",
-            message: "You need to accept the license and terms first",
+            message: "Procesando",
+            spinner: true,
+            position: "top",
+            group: "my-group",
+            badgeStyle: { display: "none" },
           });
-        } else {
+          let response = await fetch(
+            "https://tempora.herokuapp.com/api/authorization/sign-up",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: `{"full_name":"${name.value}","email":"${email.value}","password":"${password.value}"}`,
+            }
+          );
+
+          response = await response.json();
+
+          if (response.Error) {
+            $q.notify({
+              color: "red-6",
+              textColor: "white",
+              message: "Error en la operacion vuelva a intentarlo mas tarde",
+              spinner: false,
+              position: "top",
+              group: "my-group",
+              badgeStyle: { display: "none" },
+            });
+          } else {
+            $q.notify({
+              color: "green-6",
+              textColor: "white",
+              message: "Todo Listo",
+              spinner: false,
+              position: "top",
+              group: "my-group",
+              badgeStyle: { display: "none" },
+              timeout: 1000,
+            });
+
+            userSeccionStore.fillSeccion(
+              response.Body[0],
+              response.Body[1],
+              name,
+              email
+            );
+
+            toOnBoarding();
+          }
+        } catch (err) {
+          console.log(err);
           $q.notify({
-            color: "green-4",
+            color: "red-6",
             textColor: "white",
-            icon: "cloud_done",
-            message: "Submitted",
+            message: "Error en la operacion vuelva a intentarlo mas tarde",
+            spinner: false,
+            position: "top",
+            group: "my-group",
+            badgeStyle: { display: "none" },
           });
         }
       },

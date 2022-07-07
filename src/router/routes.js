@@ -8,7 +8,10 @@ const routes = [
   {
     path: "/app",
     component: () => import("layouts/MainLayout.vue"),
-    children: [{ path: "", component: () => import("pages/MainPage.vue") }],
+    children: [
+      { path: "", component: () => import("pages/MainPage.vue") },
+      { path: "config", component: () => import("pages/UserConfPage.vue") },
+    ],
   },
 
   {
@@ -23,6 +26,17 @@ const routes = [
       {
         path: "onBoarding",
         component: () => import("pages/OnBoardPage.vue"),
+      },
+    ],
+  },
+
+  {
+    path: "/addChild",
+    component: () => import("layouts/LoginLayout.vue"),
+    children: [
+      {
+        path: "",
+        component: () => import("src/pages/AddChildPage.vue"),
       },
     ],
   },

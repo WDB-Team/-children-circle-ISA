@@ -10,6 +10,9 @@ export const useUIStore = defineStore("UI", {
     MainNotChild: (state) => state.isMainNotChild,
   },
   actions: {
+    setHeader(state) {
+      this.isHeader = state;
+    },
     ToggleHeader() {
       this.isHeader = !this.isHeader;
     },
