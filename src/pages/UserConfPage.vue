@@ -41,7 +41,12 @@
       </div>
       <hr />
       <div class="Delete">
-        <q-btn class="Button" label="Eliminar Cuenta" color="red-7"></q-btn>
+        <q-btn
+          @click="deleteDialog = true"
+          class="Button"
+          label="Eliminar Cuenta"
+          color="red-7"
+        ></q-btn>
       </div>
     </div>
   </transition>
@@ -129,6 +134,20 @@
       </q-card-actions>
     </q-card>
   </q-dialog>
+
+  <q-dialog class="DeleteDialog" v-model="deleteDialog" persistent>
+    <q-card>
+      <q-card-section class="row items-center">
+        <q-avatar icon="delete" color="red" text-color="white" />
+        <span class="q-ml-sm">Seguro que quiere llevar a cabo esta acción</span>
+      </q-card-section>
+
+      <q-card-actions align="right">
+        <q-btn flat label="Regresar" color="red" v-close-popup />
+        <q-btn @click="onDelete" label="Eliminar" color="red" />
+      </q-card-actions>
+    </q-card>
+  </q-dialog>
 </template>
 
 <script>
@@ -181,6 +200,8 @@ export default {
     const isPasswordVisible = ref(false);
     const inputPasswordType = ref("password");
     const inputPasswordIcon = ref("o_visibility_off");
+    const deleteDialog = ref(false);
+
     return {
       userSeccionStore,
       nameDialog,
@@ -192,6 +213,7 @@ export default {
       isPasswordVisible,
       inputPasswordType,
       inputPasswordIcon,
+      deleteDialog,
 
       async onNewName() {
         if (newName.value.length > 0) {
@@ -369,6 +391,7 @@ export default {
                   "Content-Type": "application/json",
                   Authorization: `Bearer ${userSeccionStore.token}`,
                 },
+
                 body: `{"user_id":"${userSeccionStore.id}"},"new_password":"${newPassword.value}"}`,
               }
             );
@@ -428,80 +451,65 @@ export default {
       },
 
       async onDelete() {
-        if (newPassword.value.length > 0) {
-          try {
-            $q.notify({
-              color: "blue-6",
-              textColor: "white",
-              message: "Procesando",
-              spinner: true,
-              position: "top",
-              group: "my-group",
-              badgeStyle: { display: "none" },
-            });
+        try {
+          $q.notify({
+            color: "blue-6",
+            textColor: "white",
+            message: "Procesando",
+            spinner: true,
+            position: "top",
+            group: "my-group",
+            badgeStyle: { display: "none" },
+          });
 
-            let response = await fetch(
-              "https://tempora.herokuapp.com/api/user/deleteUserSystem",
-              {
-                method: "DELETE",
-                headers: {
-                  "Content-Type": "application/json",
-                  Authorization: `Bearer ${userSeccionStore.token}`,
-                },
-                body: `{"user_id":"${userSeccionStore.id}"}`,
-              }
-            );
-
-            response = await response.json();
-            console.log(response);
-            if (response.Error) {
-              $q.notify({
-                color: "red-6",
-                textColor: "white",
-                message: "Ya usted esta usando ese password ",
-                spinner: false,
-                position: "top",
-                group: "my-group",
-                badgeStyle: { display: "none" },
-              });
-            } else {
-              $q.notify({
-                color: "green-6",
-                textColor: "white",
-                message: "Todo Listo",
-                spinner: false,
-                position: "top",
-                group: "my-group",
-                badgeStyle: { display: "none" },
-                timeout: 1000,
-              });
-
-              passwordDialog.value = false;
-
-              newPassword.value = "";
+          let response = await fetch(
+            "https://tempora.herokuapp.com/api/user/deleteUserSystem",
+            {
+              method: "DELETE",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${userSeccionStore.token}`,
+              },
+              body: `{"user_id":"${userSeccionStore.id}"}`,
             }
-          } catch (err) {
-            console.log(err);
+          );
+
+          response = await response.json();
+          console.log(response);
+          if (response.Error) {
             $q.notify({
               color: "red-6",
               textColor: "white",
-              message: "Error en la operacion vuelva a intentarlo mas tarde",
+              message: "Ya usted esta usando ese password ",
               spinner: false,
               position: "top",
               group: "my-group",
               badgeStyle: { display: "none" },
             });
+          } else {
+            $q.notify({
+              color: "green-6",
+              textColor: "white",
+              message: "Todo Listo",
+              spinner: false,
+              position: "top",
+              group: "my-group",
+              badgeStyle: { display: "none" },
+              timeout: 1000,
+            });
+
+            deleteDialog.value = false;
           }
-        } else {
+        } catch (err) {
+          console.log(err);
           $q.notify({
             color: "red-6",
             textColor: "white",
-            message: "Escriba un password",
+            message: "Error en la operacion vuelva a intentarlo mas tarde",
             spinner: false,
             position: "top",
             group: "my-group",
             badgeStyle: { display: "none" },
-            timeout: 1000,
           });
         }
       },
@@ -638,6 +646,11 @@ hr {
 
 .PasswordDialog .NewPassword {
   inline-size: 100%;
+}
+
+.DeleteDialog span {
+  font-size: 17px;
+  color: red;
 }
 
 .AnimatorFormContainer {
