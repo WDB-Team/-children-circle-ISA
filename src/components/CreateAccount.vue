@@ -78,15 +78,15 @@
 
 <script>
 import { useQuasar } from "quasar";
+import { useUserSeccionStore } from "stores/UserSeccionStore";
+import { useRouter } from "vue-router";
 import { debounce } from "quasar";
 
 import { ref } from "vue";
 
 export default {
   data() {
-    return {
-      AnimatorGroup1: true,
-    };
+    return {};
   },
   methods: {
     toInnit() {
@@ -94,46 +94,116 @@ export default {
 
       debounce(this.debounceInnit, 400)();
     },
-    toOnBoarding() {
-      this.AnimatorGroup1 = false;
 
-      debounce(this.debounceOnBoarding, 600)();
-    },
     debounceInnit() {
       this.$router.push("/");
-    },
-    debounceOnBoarding() {
-      this.$router.push("/login/onBoarding");
     },
   },
 
   setup() {
     const $q = useQuasar();
-
+    const userSeccionStore = useUserSeccionStore();
+    const router = useRouter();
     const name = ref(null);
     const email = ref(null);
     const password = ref(null);
 
+    const AnimatorGroup1 = ref(true);
+
     const isPasswordVisible = ref(false);
     const inputPasswordType = ref("password");
     const inputPasswordIcon = ref("o_visibility_off");
+
+    function toOnBoarding() {
+      AnimatorGroup1.value = false;
+
+      debounce(debounceOnBoarding, 600)();
+    }
+    function debounceOnBoarding() {
+      router.push("/login/onBoarding");
+    }
+
     return {
       name,
       email,
       password,
-
+      userSeccionStore,
       isPasswordVisible,
       inputPasswordType,
       inputPasswordIcon,
+      router,
+      AnimatorGroup1,
 
-      onSubmit() {
-        $q.notify({
-          color: "blue-6",
-          textColor: "white",
-          message: "Procesando",
-          spinner: true,
-          position: "top",
-        });
+      toOnBoarding,
+      debounceOnBoarding,
+
+      async onSubmit() {
+        try {
+          $q.notify({
+            color: "blue-6",
+            textColor: "white",
+            message: "Procesando",
+            spinner: true,
+            position: "top",
+            group: "my-group",
+            badgeStyle: { display: "none" },
+          });
+          let response = await fetch(
+            "https://tempora.herokuapp.com/api/authorization/sign-up",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: `{"full_name":"${name.value}","email":"${email.value}","password":"${password.value}"}`,
+            }
+          );
+
+          response = await response.json();
+
+          if (response.Error) {
+            $q.notify({
+              color: "red-6",
+              textColor: "white",
+              message: "Error en la operacion vuelva a intentarlo mas tarde",
+              spinner: false,
+              position: "top",
+              group: "my-group",
+              badgeStyle: { display: "none" },
+            });
+          } else {
+            $q.notify({
+              color: "green-6",
+              textColor: "white",
+              message: "Todo Listo",
+              spinner: false,
+              position: "top",
+              group: "my-group",
+              badgeStyle: { display: "none" },
+              timeout: 1000,
+            });
+
+            userSeccionStore.fillSeccion(
+              response.Body[0],
+              response.Body[1],
+              name,
+              email
+            );
+
+            toOnBoarding();
+          }
+        } catch (err) {
+          console.log(err);
+          $q.notify({
+            color: "red-6",
+            textColor: "white",
+            message: "Error en la operacion vuelva a intentarlo mas tarde",
+            spinner: false,
+            position: "top",
+            group: "my-group",
+            badgeStyle: { display: "none" },
+          });
+        }
       },
 
       onReset() {

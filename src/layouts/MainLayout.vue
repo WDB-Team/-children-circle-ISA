@@ -19,6 +19,12 @@
               anchor="bottom left"
             >
               <q-list class="Menu" separator>
+                <q-item @click="toMain" clickable v-ripple v-close-popup>
+                  <q-item-section avatar
+                    ><q-icon name="home"></q-icon>
+                  </q-item-section>
+                  <q-item-section>Home </q-item-section>
+                </q-item>
                 <q-item @click="toConfig" clickable v-ripple v-close-popup>
                   <q-item-section avatar
                     ><q-icon name="settings"></q-icon>
@@ -67,11 +73,6 @@
               </q-item>
             </q-list>
           </q-expansion-item>
-
-          <q-expansion-item icon="calendar_month" label="Horarios">
-          </q-expansion-item>
-
-          <q-expansion-item icon="drafts" label="Drafts"> </q-expansion-item>
         </q-list>
       </q-scroll-area>
     </q-drawer>
@@ -103,13 +104,19 @@ export default {
     toConfig() {
       this.AnimatorGroup1 = false;
 
-      debounce(this.debounceMain, 1000)();
+      debounce(this.debounceConfig, 1000)();
     },
     debounceInnit() {
       this.$router.push("/");
     },
     debounceConfig() {
       this.$router.push("/app/config");
+    },
+    toMain() {
+      debounce(this.debounceMain, 1000)();
+    },
+    debounceMain() {
+      this.$router.push("/app");
     },
   },
 

@@ -19,8 +19,9 @@
         <q-input
           class="UserName"
           color="indigo-10"
-          v-model="name"
-          label="Escribe tu Nombre"
+          type="email"
+          v-model="email"
+          label="Escribe tu Email"
           lazy-rules="ondemand"
           :rules="[
             (val) => (val && val.length > 0) || 'Por favor llena este campo',
@@ -50,12 +51,7 @@
           </template>
         </q-input>
         <div class="Buttons">
-          <q-btn
-            class="Crear"
-            label="Crear"
-            @click="toMain"
-            color="indigo-10"
-          />
+          <q-btn type="Submit" class="Crear" label="Crear" color="indigo-10" />
           <q-btn
             label="Regresar"
             @click="toInnit"
@@ -71,76 +67,148 @@
 
 <script>
 import { useQuasar } from "quasar";
+import { useUserSeccionStore } from "stores/UserSeccionStore";
+import { useRouter } from "vue-router";
 import { debounce } from "quasar";
 
 import { ref } from "vue";
 
 export default {
-  data() {
-    return {
-      AnimatorGroup1: true,
-    };
-  },
   methods: {
     toInnit() {
       this.AnimatorGroup1 = false;
 
       debounce(this.debounceInnit, 400)();
     },
-    toMain() {
-      this.AnimatorGroup1 = false;
 
-      debounce(this.debounceMain, 1000)();
-    },
     debounceInnit() {
       this.$router.push("/");
-    },
-    debounceMain() {
-      this.$router.push("/app");
     },
   },
 
   setup() {
     const $q = useQuasar();
+    const userSeccionStore = useUserSeccionStore();
+    const router = useRouter();
 
-    const name = ref(null);
+    const email = ref(null);
     const password = ref(null);
-    const accept = ref(false);
+
+    const AnimatorGroup1 = ref(true);
+
     const isPasswordVisible = ref(false);
     const inputPasswordType = ref("password");
     const inputPasswordIcon = ref("o_visibility_off");
+
+    function toMain() {
+      AnimatorGroup1.value = false;
+
+      debounce(debounceMain, 1000)();
+    }
+
+    function debounceMain() {
+      router.push("/app");
+    }
+
     return {
-      name,
+      email,
       password,
-      accept,
+      userSeccionStore,
+      router,
       isPasswordVisible,
       inputPasswordType,
       inputPasswordIcon,
-      /*
-      onSubmit() {
-        if (accept.value !== true) {
+      AnimatorGroup1,
+
+      toMain,
+      debounceMain,
+      async onSubmit() {
+        try {
+          let encryptedData = btoa(`${email.value}:${password.value}`);
+
+          let response = await fetch(
+            "https://tempora.herokuapp.com/api/authorization/sign-in",
+            {
+              method: "GET",
+              headers: {
+                Authorization: `Basic ${encryptedData}`,
+              },
+            }
+          );
+
           $q.notify({
-            color: "red-5",
+            color: "blue-6",
             textColor: "white",
-            icon: "warning",
-            message: "You need to accept the license and terms first",
+            message: "Procesando",
+            spinner: true,
+            position: "top",
+            group: "my-group",
+            badgeStyle: { display: "none" },
           });
-        } else {
+
+          response = await response.json();
+
+          let response1 = await fetch(
+            `https://tempora.herokuapp.com/api/user/searchUserById/${response.Body[0]}`,
+            {
+              method: "GET",
+              headers: {
+                Authorization: `Bearer ${response.Body[1]}`,
+              },
+            }
+          );
+          response1 = await response1.json();
+
+          if (response.Error) {
+            $q.notify({
+              color: "red-6",
+              textColor: "white",
+              message: "Error compruebe que todo este OK",
+              spinner: false,
+              position: "top",
+              group: "my-group",
+              badgeStyle: { display: "none" },
+            });
+          } else {
+            $q.notify({
+              color: "green-6",
+              textColor: "white",
+              message: "Todo Listo",
+              spinner: false,
+              position: "top",
+              group: "my-group",
+              badgeStyle: { display: "none" },
+              timeout: 1000,
+            });
+
+            userSeccionStore.fillSeccion(
+              response.Body[0],
+              response.Body[1],
+              response1.Body.full_name,
+              email
+            );
+
+            toMain();
+          }
+        } catch (err) {
+          console.log(err);
           $q.notify({
-            color: "green-4",
+            color: "red-6",
             textColor: "white",
-            icon: "cloud_done",
-            message: "Submitted",
+            message: "Error compruebe que todo este OK",
+            spinner: false,
+            position: "top",
+            group: "my-group",
+            badgeStyle: { display: "none" },
           });
         }
       },
 
       onReset() {
-        name.value = null;
+        email.value = null;
         password.value = null;
-        accept.value = false;
       },
-*/
+
       onVisibility() {
         isPasswordVisible.value = !isPasswordVisible.value;
 
