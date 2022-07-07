@@ -126,7 +126,7 @@
             color="indigo-10"
             type="textarea"
             v-model="descripcion"
-            label="Escribe tu Contraseña"
+            label="Escribe mas Info de tu pequeño"
             lazy-rules="ondemand"
             :rules="[
               (val) =>
